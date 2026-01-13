@@ -36,17 +36,26 @@ res.json(response.data.Search);
    
 }};
 
-const getMovie = async (req,res) => {
+async function getMovie  (req,res)  {
     try{
         console.log(req.body)
+
         //It should make a GET request to the OMDb API. This time, you will need to include two query parameters:
         const {id} = req.params;
         const response =await axios.get(OMDB_BASE_URL, {
             params:{
+                i: id,
                 apikey: process.env.OMDB_API_KEY,
             },
         });
-
+        if (response.data.Response === "False") {
+            return res.status(404).json({error:response.data.Error})
+        }
+        res.json(response.data);
+    } catch (error) {
+        if (error.response){
+            
+        }
     }
 }
 
