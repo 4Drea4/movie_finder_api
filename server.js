@@ -4,6 +4,7 @@ const app = express();
 const axios = requrie('axios');
 const PORT = process.env.PORT || 3001;
 app.use(express.json());
+app.use(express.urlencoded)({extended:true});
 
 // Mount my routes.
 const movieRoutes = require("./routes/movieRoutes");
