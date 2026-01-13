@@ -12,7 +12,7 @@ const{
 router.get("/search", searchMovies);
 
 //this function will handle the GET /api/movies/:id route.
-router.get("/movies/id",getMovie);
+router.get("/movies/:id",getMovie);
 
 //export the router
 module.exports = router;

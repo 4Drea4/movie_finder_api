@@ -1,5 +1,6 @@
 const axios = require("axios");
-const OMDB_BASE_URL = "http://www.omdbapi.com/"
+const omdbClient = require("../services/omdb-client");
+
 
 async function searchMovies (req,res) {
     try{
@@ -54,7 +55,7 @@ async function getMovie  (req,res)  {
         res.json(response.data);
     } catch (error) {
         if (error.response){
-            
+
         }
     }
 }
