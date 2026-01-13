@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
+const{
+    searchMovies,
+    getMovie } = require("../controllers/movieController");
 
 //import the controller functions
 

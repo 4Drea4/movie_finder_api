@@ -1,7 +1,11 @@
 const axios = require("axios");
+const OMDB_BASE_URL = "http://www.omdbapi.com/"
 
-async searchMovies = async (req,res) => {
-    //i need to await axios here
+const searchMovies = async (req,res) => {
+    try{
+        const 
+    }
+   
 }
 
 const getMovie = async (req,res) => {
