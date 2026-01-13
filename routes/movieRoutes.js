@@ -12,4 +12,4 @@ router.get("/search", searchMovies);
 router.get("/movies/id",getMovie);
 
 //export the router
-
+module.exports = router;
